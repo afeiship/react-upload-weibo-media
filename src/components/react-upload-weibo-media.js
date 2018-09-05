@@ -11,13 +11,12 @@ export default class extends Component {
   /*===properties start===*/
   static propTypes = {
     className: PropTypes.string,
-    value: PropTypes.object,
+    value: PropTypes.string,
     onChange: PropTypes.func,
     size: PropTypes.array
   };
 
   static defaultProps = {
-    value: null,
     onChange: noop,
     size: ['100%', '160px']
   };

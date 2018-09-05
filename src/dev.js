@@ -7,22 +7,27 @@ import tokenJson from './token.json';
 // install: npm install afeiship/react-upload-weibo-media --save
 // import : import ReactUploadWeiboMedia from 'react-upload-weibo-media'
 
-class App extends React.Component{
+class App extends React.Component {
   state = {
-    token: tokenJson.token
+    token: tokenJson.token,
+    value: 'http://placeholder.qiniudn.com/800x80'
   };
 
-  constructor(props){
+  constructor(props) {
     super(props);
     window.demo = this;
     window.refs = this.refs;
     window.rc = this.refs.rc;
   }
 
-  render(){
+  _onChange = inEvent => {
+    console.log(inEvent);
+  };
+
+  render() {
     return (
       <div className="hello-react-upload-weibo-media">
-        <ReactUploadWeiboMedia token={this.state.token} ref='rc' />
+        <ReactUploadWeiboMedia onChange={this._onChange} value={this.state.value} token={this.state.token} ref='rc' />
       </div>
     );
   }
@@ -30,6 +35,6 @@ class App extends React.Component{
 /*===example end===*/
 
 ReactDOM.render(
-    <App />,
-    document.getElementById('app')
+  <App />,
+  document.getElementById('app')
 );
