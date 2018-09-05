@@ -1,18 +1,20 @@
 $react-upload-weibo-media-options:(
-
+  border-color: #ccc
 )!default;
 
 .react-upload-weibo-media{
   position: relative;
 
+  $border-color: map-get($map: $react-upload-weibo-media-options, $key: border-color );
+
   &:hover{
     input{
-      border-color: darken(#ccc,15%);
+      border-color: darken($border-color,15%);
     }
   }
   input{
     width: 100%;
-    border: 2px dashed #ccc;
+    border: 2px dashed $border-color;
     padding: 10px;
     margin-bottom: 5px;
 
@@ -22,7 +24,7 @@ $react-upload-weibo-media-options:(
   }
 
   &-img{
-    border:1px solid #ccc;
+    border:1px solid $border-color;
     background: url(https://ws2.sinaimg.cn/large/006tNbRwgy1fuyzctsgfvj30cs0cs0ti.jpg) no-repeat center center;
     background-size: 16%;
     &.bgn{
