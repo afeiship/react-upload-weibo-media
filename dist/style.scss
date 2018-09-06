@@ -7,11 +7,6 @@ $react-upload-weibo-media-options:(
 
   $border-color: map-get($map: $react-upload-weibo-media-options, $key: border-color );
 
-  &:hover{
-    input{
-      border-color: darken($border-color,15%);
-    }
-  }
   input{
     &[type='file']{
       width: 100%;
@@ -21,6 +16,9 @@ $react-upload-weibo-media-options:(
 
       &:focus{
         outline: none;
+      }
+      &:hover{
+        border-color: darken($border-color,20%);
       }
     }
   }
