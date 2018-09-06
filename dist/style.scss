@@ -13,13 +13,15 @@ $react-upload-weibo-media-options:(
     }
   }
   input{
-    width: 100%;
-    border: 2px dashed $border-color;
-    padding: 10px;
-    margin-bottom: 5px;
+    &[type='file']{
+      width: 100%;
+      border: 2px dashed $border-color;
+      padding: 10px;
+      margin-bottom: 5px;
 
-    &:focus{
-      outline: none;
+      &:focus{
+        outline: none;
+      }
     }
   }
 
