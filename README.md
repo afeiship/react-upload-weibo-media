@@ -45,7 +45,7 @@ $react-upload-weibo-media-options:(
 class App extends React.Component {
   state = {
     token: tokenJson.token,
-    value: 'http://placeholder.qiniudn.com/800x80'
+    value: 'http://placeholder.qiniudn.com/80x80'
   };
 
   constructor(props) {
@@ -69,3 +69,7 @@ class App extends React.Component {
 }
 
 ```
+
+
+## snapshot:
+![](https://ws3.sinaimg.cn/large/0069RVTdgy1fuzkehe8a0j30o20cmq4k.jpg)
