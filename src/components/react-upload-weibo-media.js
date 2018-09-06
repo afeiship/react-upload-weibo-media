@@ -55,7 +55,11 @@ export default class extends Component {
     return (
       <div className={classNames('react-upload-weibo-media', className)} {...props}>
         <ReactUploadWeibo token={token} onChange={this._onChange} />
-        <ReactFigure className={classNames('react-upload-weibo-media-img', { 'bgn': !!_value })} style={{ width: size[0], height: size[1] || size[0] }}>
+        <ReactFigure
+          className={classNames('react-upload-weibo-media-img', { 'bgn': !!_value })}
+          style={{ width: size[0], height: size[1] || size[0] }}
+          data-object-fit='contain'
+        >
           {_value && <img src={_value} />}
         </ReactFigure>
       </div>

@@ -10,7 +10,7 @@ import tokenJson from './token.json';
 class App extends React.Component {
   state = {
     token: tokenJson.token,
-    value: 'http://placeholder.qiniudn.com/800x80'
+    value: 'http://placeholder.qiniudn.com/80x80'
   };
 
   constructor(props) {
