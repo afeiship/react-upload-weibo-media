@@ -1,33 +1,37 @@
-$react-upload-weibo-media-options:(
+$react-upload-weibo-media-options: (
   border-color: #ccc
-)!default;
+) !default;
 
-.react-upload-weibo-media{
+.react-upload-weibo-media {
   position: relative;
 
-  $border-color: map-get($map: $react-upload-weibo-media-options, $key: border-color );
+  $border-color: map-get(
+    $map: $react-upload-weibo-media-options,
+    $key: border-color
+  );
 
-  input{
-    &[type='file']{
+  &__uploader {
+    &[type="file"] {
       width: 100%;
       border: 2px dashed $border-color;
       padding: 10px;
       margin-bottom: 5px;
 
-      &:focus{
+      &:focus {
         outline: none;
       }
-      &:hover{
-        border-color: darken($border-color,20%);
+      &:hover {
+        border-color: darken($border-color, 20%);
       }
     }
   }
 
-  &-img{
-    border:1px solid $border-color;
-    background: url(https://ws2.sinaimg.cn/large/006tNbRwgy1fuyzctsgfvj30cs0cs0ti.jpg) no-repeat center center;
+  &__image {
+    border: 1px solid $border-color;
+    background: url(https://tva1.sinaimg.cn/large/006tNbRwgy1fuyzctsgfvj30cs0cs0ti.jpg) no-repeat center center;
     background-size: 16%;
-    &.bgn{
+    padding: 4px;
+    &.bgn {
       background: none;
     }
   }

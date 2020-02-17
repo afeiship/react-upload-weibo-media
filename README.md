@@ -1,75 +1,67 @@
 # react-upload-weibo-media
-> React upload media for weibo
+> React upload media.
 
-## properties:
-```javascript
-
-  static propTypes = {
-    className: PropTypes.string,
-    value: PropTypes.string,
-    onChange: PropTypes.func,
-    size: PropTypes.array
-  };
-
-  static defaultProps = {
-    onChange: noop,
-    size: ['100%', '160px']
-  };
-  
+## installation
+```shell
+npm install -S @feizheng/react-upload-weibo-media
 ```
 
-## install && import:
-```bash
-npm install --save afeiship/react-upload-weibo-media --registry=https://registry.npm.taobao.org
+## update
+```shell
+npm update @feizheng/react-upload-weibo-media
 ```
 
-```js
-import ReactUploadWeiboMedia from 'react-upload-weibo-media';
-```
-
-```scss
-// customize your styles:
-$react-upload-weibo-media-options:(
-);
-
-@import 'node_modules/react-upload-weibo-media/dist/style.scss';
-```
+## properties
+| Name      | Type   | Default           | Description                           |
+| --------- | ------ | ----------------- | ------------------------------------- |
+| className | string | -                 | The extended className for component. |
+| value     | string | -                 | Default value.                        |
+| onChange  | func   | noop              | The change handler.                   |
+| size      | array  | ['100%', '160px'] | The media(image) size.                |
 
 
-## usage:
-```jsx
+## usage
+1. import css
+  ```scss
+  @import "~@feizheng/react-upload-weibo-media/dist/style.scss";
 
-// install: npm install afeiship/react-upload-weibo-media --save
-// import : import ReactUploadWeiboMedia from 'react-upload-weibo-media'
+  // customize your styles:
+  $react-upload-weibo-media-options: ()
+  ```
+2. import js
+  ```js
+  import ReactUploadWeiboMedia from '@feizheng/react-upload-weibo-media';
+  import ReactDOM from 'react-dom';
+  import React from 'react';
+  import tokenJson from '../.token.json';
+  import './assets/style.scss';
 
-class App extends React.Component {
-  state = {
-    token: tokenJson.token,
-    value: 'http://placeholder.qiniudn.com/80x80'
-  };
+  class App extends React.Component {
+    state = {
+      token: tokenJson.token,
+      value: ''
+    };
 
-  constructor(props) {
-    super(props);
-    window.demo = this;
-    window.refs = this.refs;
-    window.rc = this.refs.rc;
+    _onChange = (inEvent) => {
+      console.log(inEvent);
+    };
+
+    render() {
+      return (
+        <div className="app-container">
+          <ReactUploadWeiboMedia
+            onChange={this._onChange}
+            value={this.state.value}
+            token={this.state.token}
+          />
+        </div>
+      );
+    }
   }
 
-  _onChange = inEvent => {
-    console.log(inEvent);
-  };
+  ReactDOM.render(<App />, document.getElementById('app'));
 
-  render() {
-    return (
-      <div className="hello-react-upload-weibo-media">
-        <ReactUploadWeiboMedia onChange={this._onChange} value={this.state.value} token={this.state.token} ref='rc' />
-      </div>
-    );
-  }
-}
+  ```
 
-```
-
-
-## snapshot:
-![](https://ws3.sinaimg.cn/large/0069RVTdgy1fuzkehe8a0j30o20cmq4k.jpg)
+## documentation
+- https://afeiship.github.io/react-upload-weibo-media/
