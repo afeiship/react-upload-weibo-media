@@ -18,7 +18,7 @@ __GENERATE_DOCS__
 1. import css
   ```scss
   @import "~@feizheng/react-upload-weibo-media/dist/style.scss";
-  @import "~@feizheng/react-figure/dist/style.scss";
+  @import '~@feizheng/webkit-sassui-frame-wrapper';
 
   // customize your styles:
   $react-upload-weibo-media-options: ()
