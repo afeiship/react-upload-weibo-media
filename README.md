@@ -18,6 +18,7 @@ npm update @feizheng/react-upload-weibo-media
 | value     | string | -                 | Default value.                        |
 | onChange  | func   | noop              | The change handler.                   |
 | size      | array  | ['100%', '160px'] | The media(image) size.                |
+| inputable | bool   | false             | If input control use text diretly.    |
 
 
 ## usage

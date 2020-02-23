@@ -10,18 +10,45 @@ $react-upload-weibo-media-options: (
     $key: border-color
   );
 
-  &__uploader {
-    &[type="file"] {
-      width: 100%;
-      border: 2px dashed $border-color;
-      padding: 10px;
-      margin-bottom: 5px;
+  input {
+    &:focus {
+      outline: none;
+    }
+  }
 
-      &:focus {
-        outline: none;
+  &__input {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border: 2px dashed $border-color;
+    margin-bottom: 5px;
+    &:hover {
+      border-color: darken($border-color, 20%);
+    }
+    > .is-action {
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      font-size: 20px;
+      text-align: center;
+      -webkit-appearance: none;
+      cursor: pointer;
+      color: transparent;
+      &::after {
+        content: "🐶";
       }
-      &:hover {
-        border-color: darken($border-color, 20%);
+      &:checked {
+        color: #ccc;
+      }
+    }
+
+    > .is-form-control {
+      flex: 1;
+      input {
+        border: 1px solid #ccc;
+        padding: 10px;
+        width: 100%;
+        // border: none;
       }
     }
   }

@@ -17,7 +17,10 @@ export default merge(baseConfig, {
   externals: externals.base({
     '@feizheng/noop': '@feizheng/noop',
     '@feizheng/react-figure': '@feizheng/react-figure',
-    '@feizheng/react-upload-weibo': '@feizheng/react-upload-weibo'
+    '@feizheng/react-upload-weibo': '@feizheng/react-upload-weibo',
+    '@feizheng/react-checkbox': '@feizheng/react-checkbox',
+    '@feizheng/react-input': '@feizheng/react-input',
+    '@feizheng/react-if-else': '@feizheng/react-if-else',
   }),
   plugins: [plugins.clean(), plugins.copyStyles()]
 });

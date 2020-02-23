@@ -1,6 +1,6 @@
 {
   "name": "@feizheng/react-upload-weibo-media",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React upload media.",
   "main": "dist/index.js",
   "scripts": {
@@ -72,7 +72,10 @@
   },
   "dependencies": {
     "@feizheng/noop": "^1.0.0",
+    "@feizheng/react-checkbox": "^1.0.0",
     "@feizheng/react-figure": "^1.0.1",
+    "@feizheng/react-if-else": "^1.2.0",
+    "@feizheng/react-input": "^1.0.0",
     "@feizheng/react-upload-weibo": "^1.0.0",
     "@feizheng/webkit-sassui-frame-wrapper": "^1.0.0",
     "classnames": "^2.2.6",
