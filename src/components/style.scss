@@ -65,8 +65,10 @@ $react-upload-weibo-media-options: (
     padding: 4px;
     transition: all 0.3s;
     border-radius: 2px;
+    opacity: 0.6;
     &:hover {
       border-color: darken($border-color, 10%);
+      opacity: 1;
     }
     &.bgn {
       background: none;
