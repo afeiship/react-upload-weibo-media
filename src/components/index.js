@@ -2,13 +2,12 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import noop from '@feizheng/noop';
-import objectAssign from 'object-assign';
-import ReactUploadWeibo from '@feizheng/react-upload-weibo';
-import ReactFigure from '@feizheng/react-figure';
-import ReactCheckbox from '@feizheng/react-checkbox';
-import ReactInput from '@feizheng/react-input';
-import ReactIfElse from '@feizheng/react-if-else';
+import noop from '@jswork/noop';
+import ReactUploadWeibo from '@jswork/react-upload-weibo';
+import ReactFigure from '@jswork/react-figure';
+import ReactCheckbox from '@jswork/react-checkbox';
+import ReactInput from '@jswork/react-input';
+import ReactIfElse from '@jswork/react-if-else';
 
 const CLASS_NAME = 'react-upload-weibo-media';
 
@@ -40,7 +39,7 @@ export default class ReactUploadWeiboMedia extends Component {
 
   static defaultProps = {
     onChange: noop,
-    size: ['100%', '160px'],
+    size: ['100%', '180px'],
     inputable: false
   };
 
@@ -111,6 +110,7 @@ export default class ReactUploadWeiboMedia extends Component {
           />
           <ReactIfElse value={_inputable} className="is-form-control">
             <ReactInput
+              placeholder="你也可以在这里输入地址..."
               value={_value}
               className={`${CLASS_NAME}__text`}
               onChange={this.handleInputChange}

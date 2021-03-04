@@ -1,5 +1,5 @@
 $react-upload-weibo-media-options: (
-  border-color: #ccc
+  border-color: #ccc,
 ) !default;
 
 .react-upload-weibo-media {
@@ -7,7 +7,7 @@ $react-upload-weibo-media-options: (
 
   $border-color: map-get(
     $map: $react-upload-weibo-media-options,
-    $key: border-color
+    $key: border-color,
   );
 
   input {
@@ -22,9 +22,14 @@ $react-upload-weibo-media-options: (
     width: 100%;
     border: 2px dashed $border-color;
     margin-bottom: 5px;
+    transition: all 0.3s;
+    border-radius: 4px;
+    overflow: hidden;
+
     &:hover {
       border-color: darken($border-color, 20%);
     }
+
     > .is-action {
       width: 40px;
       height: 40px;
@@ -45,10 +50,10 @@ $react-upload-weibo-media-options: (
     > .is-form-control {
       flex: 1;
       input {
-        border: 1px solid #ccc;
         padding: 10px;
         width: 100%;
-        // border: none;
+        height: 40px;
+        border: none;
       }
     }
   }
@@ -58,6 +63,11 @@ $react-upload-weibo-media-options: (
     background: url(https://tva1.sinaimg.cn/large/006tNbRwgy1fuyzctsgfvj30cs0cs0ti.jpg) no-repeat center center;
     background-size: 16%;
     padding: 4px;
+    transition: all 0.3s;
+    border-radius: 2px;
+    &:hover {
+      border-color: darken($border-color, 10%);
+    }
     &.bgn {
       background: none;
     }
